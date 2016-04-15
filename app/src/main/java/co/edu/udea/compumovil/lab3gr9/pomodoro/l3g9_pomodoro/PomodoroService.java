@@ -7,12 +7,8 @@ import android.os.IBinder;
 import android.os.SystemClock;
 import android.util.Log;
 import android.widget.Chronometer;
-import android.widget.Toast;
 
-/**
- * Created by julian.vasquezg on 15/04/16.
- */
-public class ServicePomodoro extends Service {
+public class PomodoroService extends Service {
     private static String LOG_TAG = "PomodoroService";
     private IBinder mBinder = new MyBinder();
     private Chronometer mChronometer;
@@ -51,8 +47,8 @@ public class ServicePomodoro extends Service {
         return hours + ":" + minutes + ":" + seconds + ":" + millis;
     }
     public class MyBinder extends Binder {
-        ServicePomodoro getService() {
-            return ServicePomodoro.this;
+        PomodoroService getService() {
+            return PomodoroService.this;
         }
     }
 }

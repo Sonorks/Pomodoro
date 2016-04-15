@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.edu.udea.compumovil.lab3gr9.pomodoro.l3g9_pomodoro">
 
+    <service
+        android:name=".ServicePomodoro"
+        android:enabled="true"
+        android:exported="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".PomodoroService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
